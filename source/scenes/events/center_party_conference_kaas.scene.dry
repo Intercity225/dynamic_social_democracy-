@@ -36,7 +36,6 @@ Despite pleads from his party members and colleagues, Kaas has officially resign
 @joos
 subtitle: Joos is part of the Catholic worker groups, and the current deputy leader of the party responsible for organizational work.
 unavailable-subtitle: [? if z_relation < 70: Our relations are not good enough. ?][? if bruning_unlock: Brüning is able to overshadow Joos due to his status as Chancellor. ?][? if stegerwald_unlock: Stegerwald is able to secure the votes of the party's workers. ?]
-choose-if: joos_unlock
 on-arrival: z_leader = "Joos"; catholics_z -= 5; catholics_dvp += 3; catholics_lvp += 3; catholics_dnvp += 3 if dnvp_ideology == "Moderate"; catholics_spd += 5; workers_z += 5; z_relation += 10; zentrum_disintegration += 1; dvp_left += 1; ddp_left += 1; ddp_cohesion += 1; lvp_left += 1; fake_joos = 1
 face-image: img/portraits/Joseph_Joos.jpg
 
@@ -47,7 +46,6 @@ Unfortunately, the hands-off approach to internal party affairs under Kaas is ex
 @bruning
 subtitle: Brüning is the leader of the <span style="color: #000000;">Center</span>'s parliamentary group, and the party's economic expert.
 unavailable-subtitle: [? if stegerwald_unlock: The party is inclined to support Stegerwald over his protege. ?][? if chancellor != "Brüning": Brüning needs more power. ?]
-choose-if: bruning_unlock
 on-arrival: z_leader = "Brüning"; z_relation -= 3; dvp_right += 1; ddp_right += 1; lvp_right += 1
 face-image: img/portraits/BrüningHeinrich.jpg
 
@@ -58,7 +56,6 @@ Nothing ever happens.
 @guerard
 subtitle: Guérard is part of the <span style="color: #000000;">Center</span>'s civil servant wing, and is in the dead center of the party politically.
 unavailable-subtitle: Guérard is only available as a compromise candidate, as he lacks a strong base behind himself.
-choose-if: guerard_unlock
 on-arrival: z_leader = "Guérard"; z_relation += 3; new_middle_z += 6; old_middle_z += 2
 face-image: img/portraits/guerard.jpg
 
@@ -68,7 +65,6 @@ His political position aligns with that of former chancellor and party leader Wi
 
 @stegerwald
 subtitle: Stegerwald supports 'leaving the tower', expanding the party to include Protestants.
-choose-if: stegerwald_unlock
 unavailable-subtitle: Stegerwald lacks the necessary influence to overcome his detractors, and the <span style="color: #000000;">Center</span> believes that their electoral situation is fine as is.
 on-arrival: z_leader = "Stegerwald"; stegerwald_transformation_timer = 12; z_ideology = "Right"; stegerwald_path = 1; z_relation -= 8; zentrum_disintegration += 2; new_middle_z -= 5; old_middle_z -= 3; rural_z -= 1; catholics_z -= 5; workers_z += 5; unemployed_z += 3; catholics_spd += 8; catholics_other += 4; catholics_dnvp += 2 if dnvp_ideology == "Moderate"; catholics_dvp += 4; catholics_ddp += 2; catholics_lvp += 4; dvp_right += 1; ddp_left += 1; ddp_cohesion += 1; liberal_cooperation += 1; bourgeois_cooperation += 1; catholics -= 5; new_middle_dnvp -= 2 if dnvp_ideology == "Radical"; old_middle_dnvp -= 3 if dnvp_ideology == "Radical"; rural_dnvp -= 3 if dnvp_ideology == "Radical"; new_middle_z += 2 if dnvp_ideology == "Radical"; old_middle_z += 3 if dnvp_ideology == "Radical"; rural_z += 3 if dnvp_ideology == "Radical"; prussia_leader = "Brüning" if prussia_leader == "Stegerwald"
 face-image: img/portraits/stegerwald.jpg
