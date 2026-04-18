@@ -325,14 +325,12 @@ The <span style="color: #000000;">**CVP**</span> aims to follow the Essen Progra
 @cvp_party_congress_go
 title: First <span style="color: #000000;">**[+ z_party_name +]**</span> Congress
 subtitle: The future of this new party will be decided here.
-view-if: not cvp_dvp_trigger
 go-to: cvp_party_congress
 
 @cvp_dvp_merger
 title: The <span style="color: #C0A054;">**DVP**</span> also wants in.
 subtitle: Huh?
 call: cvp_dvp_formed
-view-if: cvp_dvp_trigger
 
 Before the <span style="color: #000000;">Christian People's Party</span> was to be announced to the public, representatives from the beleaguered <span style="color: #C0A054;">**DVP**</span> have shown their interest in joining the arrangement as well.
 
